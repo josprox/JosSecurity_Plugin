@@ -6,6 +6,7 @@ Description: Agrega todas las funcionabilidades de JosSecurity en wordpress, se 
 Version: 1.8.3
 Author: Jose Luis Melchor Estrada - JosSecurity.
 Author URI: https://josprox.com/
+GitHub Plugin URI: https://github.com/josprox/JosSecurity_Plugin
 */
 if(file_exists(__DIR__ . DIRECTORY_SEPARATOR ."../../../../jossecurity.php")){
     include (__DIR__ . DIRECTORY_SEPARATOR ."../../../../jossecurity.php");
@@ -78,6 +79,8 @@ function jossecurity_init(){
 if(file_exists(__DIR__ . DIRECTORY_SEPARATOR . "smtp/wp-mail.php")){
     include (__DIR__ . DIRECTORY_SEPARATOR . "smtp/wp-mail.php");
 }
+
+include (__DIR__ . DIRECTORY_SEPARATOR . "updater.php");
 
 add_action('admin_menu', 'jossecurity_admin_menu');
 add_action('admin_head', 'head_admin');
