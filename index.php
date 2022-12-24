@@ -3,8 +3,8 @@
 Plugin Name: JosSecurity WP
 Plugin URL: https://jossecurity.josprox.com/
 Description: Agrega todas las funcionabilidades de JosSecurity en wordpress, se incluirá not pay, head, footer, etc.
-Version: 1.8.3
-Author: Jose Luis Melchor Estrada - JosSecurity.
+Version: 1.8.4
+Author: Jose Luis Melchor Estrada - JosSecurity - El Diamante Soluciones TI.
 Author URI: https://josprox.com/
 GitHub Plugin URI: https://github.com/josprox/JosSecurity_Plugin
 */
