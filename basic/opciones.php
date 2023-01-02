@@ -114,6 +114,34 @@ if(isset($_POST['enviar'])){
     </script>
         <?php
       }
+    }elseif($opcion == "CAC"){
+      if(!file_exists(__DIR__ . DIRECTORY_SEPARATOR . "admin_custom.php")){
+        $wp_admin_custom = fopen(__DIR__ . DIRECTORY_SEPARATOR . "admin_custom.php", 'w');
+        fwrite($wp_admin_custom, "<?php\nadd_action('admin_head', 'head_admin');\nadd_action('admin_footer', 'footer_admin');\n?>");
+        fclose($wp_admin_custom);
+        ?>
+        <script>
+        Swal.fire(
+        'Completado',
+        'Se ha activado correctamente el diseño personalizado dentro de WordPress.',
+        'success'
+        ),
+        window.location.reload()
+    </script>
+        <?php
+      }
+    }elseif($opcion == "DAC"){
+      unlink(__DIR__ . DIRECTORY_SEPARATOR . "admin_custom.php");
+        ?>
+        <script>
+        Swal.fire(
+        'Completado',
+        'Se ha desactivado correctamente el diseño personalizado dentro de WordPress.',
+        'success'
+        ),
+        window.location.reload()
+    </script>
+        <?php
     }
     ?>
     </div>
